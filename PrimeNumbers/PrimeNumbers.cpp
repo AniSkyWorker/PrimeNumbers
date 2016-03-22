@@ -1,4 +1,3 @@
-
 #include "stdafx.h"
 #include "EratosthenSieve.h"
 #include <iostream>
@@ -13,13 +12,12 @@ int main(int argc, char * argv[])
 	}
 
 	auto primeNumberSet = GeneratePrimeNumbersSet(std::stoi(argv[1]));
+
 	for (auto & it : primeNumberSet)
 	{
 		std::cout << it << "; ";
 	}
-
 	std::cout << std::endl;
-
     return 0;
 }
 

@@ -10,7 +10,7 @@ std::set<int> GeneratePrimeNumbersSet(int upperBound)
 	std::size_t primeNumber = C_FIRST_PRIME_NUMBER;
 	std::set<int> primeNumbersSet;
 
-	while (primeNumber < arePrimeNumbers.size())
+	while (primeNumber * primeNumber < arePrimeNumbers.size())
 	{
 		for (std::size_t counter = primeNumber * primeNumber; counter < arePrimeNumbers.size(); counter += primeNumber)
 		{
@@ -23,7 +23,7 @@ std::set<int> GeneratePrimeNumbersSet(int upperBound)
 	{
 		if (arePrimeNumbers[i])
 		{
-			primeNumbersSet.insert(i);
+			primeNumbersSet.insert(static_cast<int>(i));
 		}
 
 	}
